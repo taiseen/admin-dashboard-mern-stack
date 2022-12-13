@@ -56,43 +56,46 @@ REACT_APP_SERVER_URL = http://localhost:3001/
 ```
 🟨
 src
-├── api
-|   └── index.js
+├── assets
+|   └── profile.jpeg
 |
 ├── components
+|   ├── BreakdownChart.jsx
+|   ├── DataGridCustomColumnMenu.jsx
+|   ├── DataGridCustomToolbar.jsx
 |   ├── FlexBetween.jsx
-|   ├── Friend.jsx
-|   ├── UserImage.jsx
-|   └── WidgetWrapper.jsx
+|   ├── Header.jsx
+|   ├── index.js
+|   ├── Navbar.jsx
+|   ├── OverviewChart.jsx
+|   ├── Sidebar.jsx
+|   └── StatBox.jsx
+|
+├── constants                               🟡 static file's
+|   ├── adminColumns.js
+|   ├── customersColumns.js
+|   ├── geoData.js
+|   └── tokensDark.js
 |
 ├── pages
-|   ├── loginPage
-|   |   ├── Form.jsx
-|   |   ├── index.jsx
-|   |   └── value&validation.js
-|   |
-|   ├── widgets
-|   |   ├── Advert.jsx
-|   |   ├── DeletePostDialog.jsx
-|   |   ├── FriendList.jsx
-|   |   ├── index.js
-|   |   ├── NewPostCreate.jsx
-|   |   ├── PostsContainer.jsx
-|   |   ├── SinglePost.jsx
-|   |   └── UserInfo.jsx
-|   |
-|   ├── HomePage.jsx
-|   ├── Navbar.jsx
-|   └── UserProfilePage.jsx
-|
-├── redux
-|   ├──features
-|   |  ├── authSlice.js
-|   |  ├── postSlice.js
-|   |  └── themeSlice.js
-|   |
+|   ├── Admin.jsx
+|   ├── Breakdown.jsx
+|   ├── Customers.jsx
+|   ├── Daily.jsx
+|   ├── Dashboard.jsx
+|   ├── Geography.jsx
 |   ├── index.js
-|   └── rootReducer.js
+|   ├── Layout.jsx
+|   ├── Monthly.jsx
+|   ├── Overview.jsx
+|   ├── Performance.jsx
+|   ├── Products.jsx
+|   └── Transactions.jsx
+|
+├── reduxToolkit
+|   ├── api.js                              🟡 REST API Calling... 
+|   ├── globalSlice.js                      🟡 Reducer => State + Slice   
+|   └── index.js                            🟡 Global Store for data accessing...
 |
 ├── styles
 |   ├── index.css

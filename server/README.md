@@ -48,53 +48,53 @@ server
 |   └── mongoDB.js
 |
 ├── controllers                         🟨 Database Query Functions 🟨
-|   ├── auth
-|   |   ├── login.js    
-|   |   └── registration.js 
-|   |   
-|   ├── posts   
-|   |   ├── createPost.js   
-|   |   ├── deleteUserPost.js   
-|   |   ├── getFeedPosts.js 
-|   |   ├── getUserPosts.js 
-|   |   └── likePost.js 
-|   |   
-|   ├── users   
-|   |   ├── addRemoveFriend.js  
-|   |   ├── getUser.js  
-|   |   └── getUserFriends.js   
+|   ├── client
+|   |   ├── getCustomers.js
+|   |   ├── getGeography.js
+|   |   ├── getProducts.js
+|   |   └── getTransactions.js
+|   |
+|   ├── general
+|   |   ├── getDashboardStats.js
+|   |   └── getUser.js
+|   |
+|   ├── management
+|   |   ├── getAdmins.js
+|   |   └── getUserPerformance.js
+|   |
+|   ├── sales
+|   |   └── getSales.js
 |   |   
 |   └──welcomeMessage.js    
-|   
-├── data    
-|   └── index.js    
-|   
-├── middleware  for                     🟨 Route Gard for protected API call by auth... 🟨  
-|   └── verifyToken.js
-|   
+|  
+├── data
+|   ├── product.js
+|   ├── statAffiliate.js
+|   ├── statOverall.js
+|   ├── statProduct.js
+|   ├── transaction.js
+|   └── users.js  
+|      
 ├── models                              🟨 Database Schema 🟨  
-|   ├── Post.js
+|   ├── AffiliateStat.js
+|   ├── OverallStat.js
+|   ├── Product.js
+|   ├── ProductStat.js
+|   ├── Transaction.js
 |   └── User.js
 |
 ├── public
-|   ├── assets
-|   |   ├── data-flow.png
-|   |   ├── info1.jpeg
-|   |   └── all images...
-|   |
+|   ├── appDeployment.png
 |   ├── backendDataFlow.png
 |   ├── dataTableRelation.png
 |   ├── fav.ico
-|   ├── jwt.jpg
 |   └── server.png
 |
 ├── routes                              🟨 REST API, URL Route for accessing data 🟨  
-|   ├── auth.js
-|   ├── posts.js
-|   └── users.js
-|
-├── storage
-|   └── fileStorage.js
+|   ├── client.js
+|   ├── general.js
+|   ├── management.js
+|   └── sales.js
 |
 ├── .env
 ├── index.js                            🟨 Main Server File 🟨  
