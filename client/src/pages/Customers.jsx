@@ -1,4 +1,4 @@
-import customersColumns from "constants/customersColumns";
+import { customersColumns } from "constants/columnsData";
 import { useGetCustomersQuery } from "reduxToolkit/api";
 import { Box, useTheme } from "@mui/material";
 import { DataGrid } from "@mui/x-data-grid";

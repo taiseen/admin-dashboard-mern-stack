@@ -44,10 +44,10 @@ PORT = 5995
 ```
 🟨
 server
-├── connection                          🟨 Database Connections 🟨
+├── connection                          🟡 Database Connections
 |   └── mongoDB.js
 |
-├── controllers                         🟨 Database Query Functions 🟨
+├── controllers                         🟡 Database Query Functions
 |   ├── client
 |   |   ├── getCustomers.js
 |   |   ├── getGeography.js
@@ -75,7 +75,7 @@ server
 |   ├── transaction.js
 |   └── users.js  
 |      
-├── models                              🟨 Database Schema 🟨  
+├── models                              🟡 Database Schema  
 |   ├── AffiliateStat.js
 |   ├── OverallStat.js
 |   ├── Product.js
@@ -90,14 +90,14 @@ server
 |   ├── fav.ico
 |   └── server.png
 |
-├── routes                              🟨 REST API, URL Route for accessing data 🟨  
+├── routes                              🟡 REST API, URL Route for accessing data 
 |   ├── client.js
 |   ├── general.js
 |   ├── management.js
 |   └── sales.js
 |
 ├── .env
-├── index.js                            🟨 Main Server File 🟨  
+├── index.js                            🟡 Main Server File
 ├── package.json
 ├── README.md
 └── yarn.lock
@@ -113,3 +113,9 @@ server
 
 # Entity Relationship Diagram for Data Model || Database Table Relationship...
 <img src="./public/dataTableRelation.png" />
+
+
+<br />
+
+# Diagram of App Deployment System...
+<img src="./public/appDeployment.png" />

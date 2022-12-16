@@ -6,7 +6,7 @@ export const getUserPerformance = async (req, res) => {
 
     try {
         const { id } = req.params;
-
+        console.log({id})
         const userWithStats = await User.aggregate([
             { $match: { _id: new mongoose.Types.ObjectId(id) } },
             {

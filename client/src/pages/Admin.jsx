@@ -1,6 +1,6 @@
-import CustomColumnMenu from "components/DataGridCustomColumnMenu";
-import adminColumns from "constants/adminColumns";
+import { adminColumns } from "constants/columnsData";
 import { useGetAdminsQuery } from "reduxToolkit/api";
+import { CustomColumnMenu } from "components";
 import { Box, useTheme } from "@mui/material";
 import { DataGrid } from "@mui/x-data-grid";
 import { Header } from "components";
@@ -10,7 +10,8 @@ const Admin = () => {
 
   const theme = useTheme();
   const { data, isLoading } = useGetAdminsQuery();
-
+  
+  
   return (
     <Box m="1.5rem 2.5rem">
 

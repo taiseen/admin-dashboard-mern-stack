@@ -1,53 +1,26 @@
-import React from "react";
-import { Box, useTheme } from "@mui/material";
 import { useGetUserPerformanceQuery } from "reduxToolkit/api";
-import { useSelector } from "react-redux";
+import { performanceColumns } from "constants/columnsData";
+import { Header, CustomColumnMenu } from "components";
+import { Box, useTheme } from "@mui/material";
 import { DataGrid } from "@mui/x-data-grid";
-import Header from "components/Header";
-import CustomColumnMenu from "components/DataGridCustomColumnMenu";
+import { useSelector } from "react-redux";
+
 
 const Performance = () => {
-  const theme = useTheme();
-  const userId = useSelector((state) => state.global.userId);
-  const { data, isLoading } = useGetUserPerformanceQuery(userId);
 
-  const columns = [
-    {
-      field: "_id",
-      headerName: "ID",
-      flex: 1,
-    },
-    {
-      field: "userId",
-      headerName: "User ID",
-      flex: 1,
-    },
-    {
-      field: "createdAt",
-      headerName: "CreatedAt",
-      flex: 1,
-    },
-    {
-      field: "products",
-      headerName: "# of Products",
-      flex: 0.5,
-      sortable: false,
-      renderCell: (params) => params.value.length,
-    },
-    {
-      field: "cost",
-      headerName: "Cost",
-      flex: 1,
-      renderCell: (params) => `$${Number(params.value).toFixed(2)}`,
-    },
-  ];
+  const theme = useTheme();
+  const userId = useSelector(state => state.theme.userId);
+  const { data, isLoading } = useGetUserPerformanceQuery(userId); // ✅ REST API Call By RTK Query
+
 
   return (
     <Box m="1.5rem 2.5rem">
+
       <Header
         title="PERFORMANCE"
         subtitle="Track your Affiliate Sales Performance Here"
       />
+
       <Box
         mt="40px"
         height="75vh"
@@ -76,15 +49,17 @@ const Performance = () => {
           },
         }}
       >
+
         <DataGrid
+          rows={(data && data.sales) || []}
+          columns={performanceColumns}
           loading={isLoading || !data}
           getRowId={(row) => row._id}
-          rows={(data && data.sales) || []}
-          columns={columns}
           components={{
             ColumnMenu: CustomColumnMenu,
           }}
         />
+
       </Box>
     </Box>
   );

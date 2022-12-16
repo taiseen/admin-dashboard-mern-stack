@@ -7,10 +7,9 @@
 |1 | yarn add `react-router-dom`    | Declarative routing for React web app     |
 |2 | yarn add `react-datepicker`    | date-picker range at UI                   |
 |3 | yarn add `react-redux`         | Official React bindings for Redux         |
-|4 | yarn add `redux-persist`       | persist and rehydrate redux stores        |
-|5 | yarn add `@reduxjs/toolkit`    | tool-set for efficient state management   |
-|6 | yarn add `@mui/icons-material` | Icons distributed as SVG React components |
-|7 | yarn add `@mui/material`       | Components that implement M. Design       |
+|4 | yarn add `@reduxjs/toolkit`    | tool-set for efficient state management   |
+|5 | yarn add `@mui/icons-material` | Icons distributed as SVG React components |
+|6 | yarn add `@mui/material`       | Components that implement M. Design       |
 |7 | yarn add `@mui/x-data-grid`    | Components that implement M. Design       |
 |8 | yarn add `@emotion/react`      | Simple styling in React                   |
 |9 | yarn add `@emotion/styled`     | styled API for emotion                    |
@@ -108,5 +107,12 @@ src
 
 <br />
 
-# ReactJs | Frontend Basic Data Flow...
+## ReactJs | Frontend Basic Data Flow...
 <img src="./public/frontendDataFlow.png" />
+
+
+<br />
+
+
+## Diagram of App Deployment System...
+<img src="../server/public/appDeployment.png" />
