@@ -24,7 +24,7 @@ const Layout = () => {
       {/* 🟡🟡🟡 Left Side 🟡🟡🟡  */}
       {/* 🟠🟠🟠 SideBar Component 🟠🟠🟠 */}
       <Sidebar
-        user={data || {}}
+        user={data || {}} // this approach is prevent our app from being broken...
         isNonMobile={isNonMobile}
         isSidebarOpen={isSidebarOpen}
         setIsSidebarOpen={setIsSidebarOpen}
@@ -37,7 +37,7 @@ const Layout = () => {
 
         {/* 🟠🟠🟠 Top-NavBar Component 🟠🟠🟠 */}
         <Navbar
-          user={data || {}}
+          user={data || {}} // this approach is prevent our app from being broken...
           isSidebarOpen={isSidebarOpen}
           setIsSidebarOpen={setIsSidebarOpen}
         />
